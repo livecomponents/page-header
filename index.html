@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,14 +28,11 @@
     }
 
     .wrapper {
-      margin: 0 0 20px 0;
-      width: 500px;
-      height: 400px;
-      border: 2px solid #CCC;
+      margin: 120px 0 20px 0;
       display: grid;
       grid-gap: 10px;
-      grid-template-columns: repeat(4, 80px);
-      grid-template-rows: repeat(3,100px);
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 400px);
       align-content: space-around;
       justify-content: space-between;
     }
@@ -62,25 +58,23 @@
       grid-column: 3 / 5;
     }
   </style>
-  <link rel="stylesheet" href="assets/main.css" />
 </head>
-
 <body>
   <!-- BEGIN: <page-header /> -->
   <page-header user="TylerDurden">
-    <a href="#main-content" slot="cah:skip-link">Skip to Main Content</a>
+    <a href="#main-content" slot="ph:skip-link">Skip to Main Content</a>
     <a slot="ph:link-1" href="https://www.example.com/">Home</a>
-    <a slot="ph:link-2" hrefhttps://www.example.com/products">Products</a>
+    <a slot="ph:link-2" href="https://www.example.com/products">Products</a>
     <a slot="ph:link-3" href="https://www.example.com/services">Services</a>
     <a slot="ph:link-4" href="https://www.example.com/innovations">Innovations</a>
     <a slot="ph:link-5" href="https://www.example.com/testimonials">Testimonials</a>
     <a slot="ph:link-6" href="https://support.example.com/">Help</a>
-    <a href="" slot="cah:custom-signin">Custom Login</a>
+    <a href="" slot="ph:custom-signin">Custom Login</a>
   </page-header>
   <!-- END: <page-header /> -->
   <a name="main-content" tabindex="-1"></a>
   <main class="main-content">
-    <!-- taken from https://gridbyexample.com/examples/example33/ -->
+    <!-- taken and modified from https://gridbyexample.com/examples/example33/ -->
     <div class="wrapper aligned">
       <div class="box item1">One</div>
       <div class="box item2">Two</div>

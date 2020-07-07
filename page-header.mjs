@@ -5,7 +5,6 @@
   const { coerceValue } = await import('./partials/utils.mjs');
   const {
     setUserState,
-    setCountFor,
     mutationObserverCallback,
     registerEvents,
     updateGuestName,
@@ -39,7 +38,7 @@
         this.origin = window.location.origin;
         if (this.root === null) { this.root = this.attachShadow({ mode: "open" }); }
         await setUserState(this, this.origin, this.userName);
-        this.root.querySelector('.page__container').classList.add('fade-in');
+        this.root.querySelector('.ph__container').classList.add('fade-in');
         registerEvents(this);
         this.observer = new MutationObserver(mutationObserverCallback.bind(this));
         this.observer.observe(this, { childList: true });

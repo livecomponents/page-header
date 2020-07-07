@@ -1,8 +1,8 @@
 {
-  "name": "page-header",
-  "version": "1.0.0",
+  "name": "@live-components/page-header",
+  "version": "1.1.0",
   "description": "An HTML Web Component Page Header",
-  "main": "index.mjs",
+  "main": "page-header.mjs",
   "scripts": {
     "build": "npm run compress",
     "compress": "bread-compressor -a brotli ./partials/* && bread-compressor -a brotli page-header.mjs && bread-compressor -a gzip page-header.js",
@@ -12,10 +12,7 @@
     "test:units": "serve .",
     "test:e2e": "cypress run --browser chrome"
   },
-  "author": {
-    "name": "Erik Isaksen",
-    "email": "nevraeka@gmail.com"
-  },
+  "author": "Erik Isaksen <nevraeka@gmail.com>",
   "keywords": [
     "web component",
     "Shadow DOM",
@@ -33,6 +30,17 @@
     "cypress": "^4.0.2",
     "serve": "^11.3.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {},
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livecomponents/page-header.git"
+  },
+  "bugs": {
+    "url": "https://github.com/livecomponents/page-header/issues"
+  },
+  "homepage": "https://github.com/livecomponents/page-header#readme"
 }
