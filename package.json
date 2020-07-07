@@ -1,0 +1,38 @@
+{
+  "name": "page-header",
+  "version": "1.0.0",
+  "description": "An HTML Web Component Page Header",
+  "main": "index.mjs",
+  "scripts": {
+    "build": "npm run compress",
+    "compress": "bread-compressor -a brotli ./partials/* && bread-compressor -a brotli page-header.mjs && bread-compressor -a gzip page-header.js",
+    "serve": "serve .",
+    "start": "npm run build && npm run serve",
+    "test": "npm run test:e2e",
+    "test:units": "serve .",
+    "test:e2e": "cypress run --browser chrome"
+  },
+  "author": {
+    "name": "Erik Isaksen",
+    "email": "erikisaksen@carfax.com"
+  },
+  "keywords": [
+    "web component",
+    "Shadow DOM",
+    "Custom Properties",
+    "Custom Events",
+    "Custom Elements",
+    "Template",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "bread-compressor-cli": "^1.0.8",
+    "cypress": "^4.0.2",
+    "serve": "^11.3.0"
+  },
+  "dependencies": {
+  }
+}
