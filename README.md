@@ -7,15 +7,23 @@
 ## Developer Experience
 
 **Page Header**
-| *customizations* | HTML Slots |
-| *install method(s)* | HTML Script Tag |
-| *runtime dependencies* | `<cxd-img-icon>` (svg icon component) |
-| *raw bytes* | page-header = 7.7kb(Broken down by separate module files - 1.6kb, 521b,  2.4kb, 3.2kb), and cxd-img-icon = 8.8kb(Broken down by separate module files - 1.1kb, 6.6kb, 1.1kb) |
-| *bytes over the wire* | `16.5kb` |
-| *compression type* | brotli (gzip for nomodule js) |
-| *browser support* | IE11 (nomodule-only basic css/initial login), full support for the last 2 versions of Safari, Edge, Firefox, Mobile Safari, Chrome |
-| *developer environment* | Qunit (unit testing), bread-compressor cli (for gzip and br), Pika CDN via NPM (distribution) |
-| *SSR Support* | minimal HTML boilerplate, JS not loaded on server |
+
+* install as an HTML Script Tag
+* only a single runtime dependency > `<cxd-img-icon>` (svg icon component)
+* very small byte size over the wire > `16.5kb`
+* optimal content compression > brotli (gzip for nomodule js) |
+* excellent browser support
+  * IE11 (nomodule-only basic css/initial login)
+  * full support for the last 2 versions of Safari, Edge, Firefox, Mobile Safari, Chrome
+* minimal developer tooling
+  * `Qunit` (unit testing)
+  * `bread-compressor` cli (for gzip and br)
+  * Unpkg CDN via NPM (distribution)*
+* SSR Support
+  * minimal HTML boilerplate (HTML slots plus wrapper)
+  * JS not loaded on server and HTML is identical on server and browser
+
+**(*) Unpkg is only one distribution method (the easiest and best for demo purposes. AWS plus tooling is another even more powerful distribution method as well. In the future we can possibly leverage the Pika cdn to bypass npm all together** 
 
 **Requirements**
 

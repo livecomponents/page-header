@@ -1,16 +1,13 @@
 {
   "name": "@live-components/page-header",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "An HTML Web Component Page Header",
   "main": "page-header.mjs",
   "scripts": {
-    "build": "npm run compress",
     "compress": "bread-compressor -a brotli ./partials/* && bread-compressor -a brotli page-header.mjs && bread-compressor -a gzip page-header.js",
     "serve": "serve .",
     "start": "npm run build && npm run serve",
-    "test": "npm run test:e2e",
-    "test:units": "serve .",
-    "test:e2e": "cypress run --browser chrome"
+    "test": "serve ."
   },
   "author": "Erik Isaksen <nevraeka@gmail.com>",
   "keywords": [

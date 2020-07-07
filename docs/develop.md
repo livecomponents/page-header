@@ -23,7 +23,7 @@ This is the HTML required to be on page before Google can scan the page for thei
 
 ```html
   <page-header>
-    <a href="#main-content" slot="cah:skip-link">Skip to Main Content</a>
+    <a href="#main-content" slot="ph:skip-link">Skip to Main Content</a>
     <a slot="ph:link-1" href="https://www.example.com/">Home</a>
     <a slot="ph:link-2" href="https://www.example.com/products">Products</a>
     <a slot="ph:link-3" href="https://www.example.com/services">Services</a>

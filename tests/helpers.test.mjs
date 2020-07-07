@@ -2,7 +2,6 @@ import {
   render,
   setProfileImg,
   displayProfile,
-  setCountFor,
   updateGuestName
 } from '../partials/helpers.mjs';
 import { ComponentStub } from './ComponentStub.mjs';
@@ -11,16 +10,13 @@ const { test, module } = QUnit;
 const beforeEach = () => {
   Component = document.createElement('component-stub');
   Component.innerHTML = `
-    <a href="#main-content" slot="cah:skip-link">Skip to Main Content</a>
-    <a slot="cah:logo" title="CARFAX Used Car Listings and Vehicle History" href="https://www.carfax.com">
-      <img src="assets/logo.svg" alt="CARFAX Logo" />
-    </a>
-    <a slot="cah:link-1" href="https://www.carfax.com/cars-for-sale">Used Cars for Sale</a>
-    <a slot="cah:link-2" href="https://secure.carfax.com/creditCard.cfx">CARFAX Reports</a>
-    <a slot="cah:link-3" href="https://www.mycarfax.com/">My Car Maintenance</a>
-    <a slot="cah:link-4" href="https://www.carfax.com/value/">Used Car Values</a>
-    <a slot="cah:link-5" href="https://www.carfax.com/car-research">Research</a>
-    <a slot="cah:link-6" href="https://support.carfax.com">Help</a>
+    <a href="#main-content" slot="ph:skip-link">Skip to Main Content</a>
+    <a slot="ph:link-1" href="https://www.example.com/">Home</a>
+    <a slot="ph:link-2" href="https://www.example.com/products">Products</a>
+    <a slot="ph:link-3" href="https://www.example.com/services">Services</a>
+    <a slot="ph:link-4" href="https://www.example.com/innovations">Innovations</a>
+    <a slot="ph:link-5" href="https://www.example.com/testimonials">Testimonials</a>
+    <a slot="ph:link-6" href="https://support.example.com/">Help</a>
   `;
   document.body.appendChild(Component);
 };
@@ -98,36 +94,11 @@ test('should display loggedin user state', async (assert)=> {
   assert.ok(Component.$.signUpLink.classList.contains('offscreen') === true);
 });
 
-module('setCountFor()', { beforeEach, afterEach });
-
-test('should update the followCount', async (assert)=> {
-  assert.ok(Component.userFollowCount === 0);
-  await render(Component, window.location.origin);
-  await setCountFor('#follow-count', '5', Component, 'follows');
-  assert.ok(Component.userFollowCount === 5);
-  assert.ok(Component.root.querySelector('#follow-count').innerHTML === ' (5)');
-});
-
-test('should not update with invalid selectors or counts', async (assert)=>{
-  await render(Component, window.location.origin);
-  await setCountFor('#follow-count', 'test', Component, 'follows');
-  assert.ok(Component.userFollowCount === 0);
-  assert.ok(Component.root.querySelector('#follow-count').innerHTML === '');
-  await render(Component, window.location.origin);
-  await setCountFor('#follow', undefined, Component, 'follows');
-  assert.ok(Component.userFollowCount === 0);
-  assert.ok(Component.root.querySelector('#follow-count').innerHTML === '');
-  await render(Component, window.location.origin);
-  await setCountFor('#follow', '5', Component, 'follows');
-  assert.ok(Component.userFollowCount === 0);
-  assert.ok(Component.root.querySelector('#follow-count').innerHTML === '');
-});
-
 module('updateGuestName()', { beforeEach, afterEach });
 
 test('should update the profile name text', async (assert)=> {
   await render(Component, window.location.origin);
-  const accountNameText = Component.root.querySelector('.cah__account-name');
+  const accountNameText = Component.root.querySelector('.ph__account-name');
   assert.ok(accountNameText.innerHTML === 'Hi, ');
   await updateGuestName(Component, 'Peter');
   assert.ok(accountNameText.innerHTML === 'Hi, Peter');
