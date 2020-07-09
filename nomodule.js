@@ -4,7 +4,7 @@
   window.addEventListener('load', function onload(){
     injectCSS();
     updateLogin(document.querySelector('page-header'))
-  });
+  });n
     
   function injectCSS () {
     if(!document || !!document.getElementById('backup__page-header-css')){ return; }
@@ -22,17 +22,19 @@
 
   function updateLogin(component) {
     if(!!component.getAttribute('user')) {
-      const appHeader = document.querySelector('page-header');
+      var appHeader = document.querySelector('page-header'),
+          user = document.createElement('span'),
+          logout = document.createElement('a');
+
       [].forEach.call(appHeader.querySelectorAll('> *'), function(el) {
         if(el.getAttribute('slot') && !(/(cah:link-)/.test(el.getAttribute('slot')))) {
           el.parentNode.removeChild(el);
         }
       });
-      const user = document.createElement('span');
+
       user.id = 'page-header-user';
       user.innerText = component.getAttribute('user');
 
-      const logout = document.createElement('a');
       logout.setAttribute('href', '/signout');
       logout.id = 'logout';
       logout.innerText = 'Sign Out';

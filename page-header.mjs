@@ -1,6 +1,6 @@
 (async function runModule(window, document) {
   if (typeof window === 'undefined'){ return; }
-  await import('https://unpkg.com/@live-components/img-icon/img-icon.mjs');
+  await import('https://cdn.skypack.dev/@live-components/img-icon');
   const customElementName = 'page-header';
   const { coerceValue } = await import('./partials/utils.mjs');
   const {

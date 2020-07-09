@@ -18,12 +18,12 @@
 * minimal developer tooling
   * `Qunit` (unit testing)
   * `bread-compressor` cli (for gzip and br)
-  * Unpkg CDN via NPM (distribution)*
+  * SkyPack CDN via NPM (distribution)*
 * SSR Support
   * minimal HTML boilerplate (HTML slots plus wrapper)
   * JS not loaded on server and HTML is identical on server and browser
 
-**(*) Unpkg is only one distribution method (the easiest and best for demo purposes. AWS plus tooling is another even more powerful distribution method as well. In the future we can possibly leverage the Pika cdn to bypass npm all together** 
+**(*) Unpkg and AWS S3/Cloudfront (plus some tooling) are other alternative distribution method as well.** 
 
 **Requirements**
 

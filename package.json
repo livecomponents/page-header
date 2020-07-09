@@ -4,7 +4,7 @@
   "description": "An HTML Web Component Page Header",
   "main": "page-header.mjs",
   "scripts": {
-    "compress": "bread-compressor -a brotli ./partials/* && bread-compressor -a brotli page-header.mjs && bread-compressor -a gzip page-header.js",
+    "compress": "bread-compressor -a brotli ./partials/* && bread-compressor -a brotli page-header.mjs && bread-compressor -a gzip nomodule.js",
     "serve": "serve .",
     "start": "npm run compress && npm run serve",
     "test": "serve ."
@@ -24,12 +24,12 @@
   "license": "MIT",
   "devDependencies": {
     "bread-compressor-cli": "^1.0.8",
-    "cypress": "^4.0.2",
     "serve": "^11.3.0"
   },
   "dependencies": {},
   "directories": {
     "doc": "docs",
+    "partials" : "partials",
     "test": "tests"
   },
   "repository": {

@@ -9,13 +9,13 @@ ONLY use one app header instance per page. This component is not meant for multi
 #### Initialization HTML
 ```html
 <!-- OPTIONAL: preloaded dependency for a performance boost -->
-<link rel="preload" crossorigin href="https://unpkg.com/@live-components/page-header@1.1.0/partials/utils.mjs" crossorigin as="script"/>
+<link rel="preload" crossorigin href="https://cdn.skypack.dev/@live-components/img-icon/partials/utils.mjs" crossorigin as="script"/>
 
 <!-- REQUIRED: main module for modern Evergreen browsers  (Safari, Edge, Chrome, Mobile Safari, and Firefox) -->
-<script crossorigin type="module" src="https://unpkg.com/@live-components/page-header@1.1.0/page-header.mjs"></script>
+<script crossorigin type="module" src="https://cdn.skypack.dev/@live-components/img-icon"></script>
 
 <!-- OPTIONAL: fallback module if basic styling and function support for older browsers is needed (IE11) -->
-<script crossorigin nomodule type="text/javascript" src="https://unpkg.com/@live-components/page-header@1.1.0/page-header.js"></script>
+<script crossorigin nomodule type="text/javascript" src="https://cdn.skypack.dev/@live-components/img-icon/nomodule.js"></script>
 ```
 
 #### Minimal HTML Content (for SEO)*
@@ -71,7 +71,7 @@ Set these values to get different themes.
 ## Dependencies
 | **name** | **location** | **type** | **reason** | **swappable** |
 | --- | --- | --- | --- | --- |
-| `<img-icon>` | `https://unpkg.com/@live-components/img-icon@1.0.0/img-icon.mjs` | External Custom Element | provides svg based icons | ❌ |
+| `<img-icon>` | `https://cdn.skypack.dev/@live-components/img-icon` | External Custom Element | provides svg based icons | ❌ |
 
 ## Customization
 
