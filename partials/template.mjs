@@ -110,7 +110,7 @@ export function css() {
       background-color: var(--ph-color--primary, #3777bc);
     }
 
-    cxd-img-icon {
+    img-icon {
       width: 24px;
       height: 24px;
     }
