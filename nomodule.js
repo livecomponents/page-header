@@ -8,7 +8,7 @@
     
   function injectCSS () {
     if(!document || !!document.getElementById('backup__page-header-css')){ return; }
-    const baseStyle = document.createElement('style');
+    var baseStyle = document.createElement('style');
     baseStyle.id = 'backup__page-header-css';
     baseStyle.innerHTML = [
       'page-header{align-items: center;justify-content: center;display: flex;background: #3777bc;height: 64px;}'
