@@ -71,12 +71,12 @@ Set these values to get different themes.
 ## Dependencies
 | **name** | **location** | **type** | **reason** | **swappable** |
 | --- | --- | --- | --- | --- |
-| `<cxd-img-icon>` | `https://static.carfax.com/live-components/cxd-img-icon/master/cxd-img-icon.mjs` | External Custom Element | provides svg based icons | ❌ |
+| `<img-icon>` | `https://unpkg.com/@live-components/img-icon@1.0.0/img-icon.mjs` | External Custom Element | provides svg based icons | ❌ |
 
 ## Customization
 
 ### Profile Dropdown Navigation Links
-The standard `carfax.com` profile navigation consists of several HTML Anchor links related to the user's account. If the default values are not what is needed for your application, add slots with the name pattern `ph:profile-item-*` as seen in the example below...
+Add slots with the name pattern `ph:profile-item-*` as seen in the example below...
 
 ```html
 <page-header>
@@ -120,10 +120,6 @@ There might be times where you want to hide a slot but remove the default value.
   <a href="/login" hidden slot="ph:custom-signup">Sign Me Up</a>
 </page-header>
 ```
-
-### Main Navigation
-It is required for all consumer-facing web applications on the `carfax.com` domain to use ALL 6 (and ONLY 6) `ph:link-*` slots for the required links. It is recommended for all other applications you use no more than 6 slots and no less than 1 slot in your HTML. All of the main navigation slots are expected to be HTML Anchor tags.
-
 
 ## Base CSS
 Please note that some CSS is injected to the head of the document on initialization of this codebase (ONLY once). This is done to insure that some styling for slots does not get broken by any CSS reset the application.

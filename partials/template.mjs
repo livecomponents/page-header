@@ -5,7 +5,7 @@ export const template = (component, origin) => {
     </style>
     <div class="ph__container">
       <div class="ph__toggle">
-        <cxd-img-icon shape='menu' fill='100'></cxd-img-icon>
+        <img-icon shape='menu' fill='100'></img-icon>
       </div>
       <div class="ph__logo">
         <slot id="logo-link" name="ph:logo"></slot>
@@ -18,10 +18,10 @@ export const template = (component, origin) => {
       </nav>
       <div class="ph__account">
         <span class="ph__account-name offscreen">Hi, ${component.userName}</span>
-        <cxd-img-icon class="ph__account-arrow-icon offscreen" shape="triangleArrowDown" fill="100"></cxd-img-icon>
+        <img-icon class="ph__account-arrow-icon offscreen" shape="triangleArrowDown" fill="100"></img-icon>
         <a href="${origin}/log${component.userIsLoggedIn ? 'out' : 'in'}" class="ph__account-icon">
           <img class="ph__account-avatar offscreen" src="${component.userPhotoURL}" alt="user profile photo" />
-          <cxd-img-icon class="ph__account-icon-img" shape="userCircle" fill="100"></cxd-img-icon>
+          <img-icon class="ph__account-icon-img" shape="userCircle" fill="100"></img-icon>
         </a>
         </div>
       <div class="ph__account${component.userIsLoggedIn ? ' offscreen' :  ''} ph__account--loggedout">
@@ -50,7 +50,7 @@ export function listItemToggle(userName, userIsLoggedIn) {
   return /* html */`
     <li class="ph__nav-listitem--profile logged-in-profile${userIsLoggedIn ? '' : ' offscreen'}">
       <a href="#" class="ph__account-icon">
-        <cxd-img-icon shape="userCircle" fill="100"></cxd-img-icon>
+        <img-icon shape="userCircle" fill="100"></img-icon>
       </a>
       <span class="ph__account-name--profile">${userName ? `Hi, ${userName}`: ''}</span>
     </li>
@@ -88,7 +88,7 @@ export function userLogo(origin = '', userPhotoURL = '') {
   return /* html */`
     <a href="${origin}/log${userIsLoggedIn ? 'out' : 'in'}" class="ph__account-icon">
       <img class="ph__account-avatar offscreen" src="${userPhotoURL}" alt="user profile photo" />
-      <cxd-img-icon class="ph__account-icon-img" shape="userCircle" fill="100"></cxd-img-icon>
+      <img-icon class="ph__account-icon-img" shape="userCircle" fill="100"></img-icon>
     </a>
   `;
 }

@@ -9,7 +9,7 @@
 **Page Header**
 
 * install as an HTML Script Tag
-* only a single runtime dependency > `<cxd-img-icon>` (svg icon component)
+* only a single runtime dependency > `<img-icon>` (svg icon component)
 * very small byte size over the wire > `16.5kb`
 * optimal content compression > brotli (gzip for nomodule js) |
 * excellent browser support

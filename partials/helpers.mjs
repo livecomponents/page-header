@@ -88,7 +88,7 @@ function cacheSelectors(component) {
     list: $root.querySelector('.ph__nav-list'),
     loggedInProfile: $root.querySelector('.logged-in-profile'),
     nav: $root.querySelector('.ph__nav'),
-    navIcon: $root.querySelector('.ph__toggle cxd-img-icon'),
+    navIcon: $root.querySelector('.ph__toggle img-icon'),
     overlay: $root.querySelector('.ph__overlay'),
     profileNav: $root.querySelector('.ph__nav--profile'),
     profileIcon: $root.querySelector('.ph__account-icon-img'),
