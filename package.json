@@ -1,6 +1,6 @@
 {
   "name": "@live-components/page-header",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "An HTML Web Component Page Header",
   "main": "page-header.mjs",
   "scripts": {
