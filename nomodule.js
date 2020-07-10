@@ -4,7 +4,7 @@
   window.addEventListener('load', function onload(){
     injectCSS();
     updateLogin(document.querySelector('page-header'))
-  });n
+  });
     
   function injectCSS () {
     if(!document || !!document.getElementById('backup__page-header-css')){ return; }

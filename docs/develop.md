@@ -3,19 +3,25 @@
 
 # Development
 ### Setup
-To initialize this component for all supported browsers, you must add scripts to the head of the document that point to their location on the CDN. 
-ONLY use one app header instance per page. This component is not meant for multiple instantiation on a single page.
+To initialize this component for all supported browsers, you must add scripts to the head of the document that point to their location on the CDN. ONLY use one page header instance per page should be used. This component is not meant for multiple instantiation on a single page.
 
-#### Initialization HTML
+#### Initialization HTML (SkyPack)
 ```html
 <!-- OPTIONAL: preloaded dependency for a performance boost -->
-<link rel="preload" crossorigin href="https://cdn.skypack.dev/@live-components/img-icon/partials/utils.mjs" crossorigin as="script"/>
+<link rel="preload" crossorigin href="https://cdn.skypack.dev/@live-components/page-header/partials/utils.mjs" crossorigin as="script"/>
 
 <!-- REQUIRED: main module for modern Evergreen browsers  (Safari, Edge, Chrome, Mobile Safari, and Firefox) -->
-<script crossorigin type="module" src="https://cdn.skypack.dev/@live-components/img-icon"></script>
+<script crossorigin type="module" src="https://cdn.skypack.dev/@live-components/page-header"></script>
 
 <!-- OPTIONAL: fallback module if basic styling and function support for older browsers is needed (IE11) -->
-<script crossorigin nomodule type="text/javascript" src="https://cdn.skypack.dev/@live-components/img-icon/nomodule.js"></script>
+<script crossorigin nomodule type="text/javascript" src="https://cdn.skypack.dev/@live-components/page-header/nomodule.js"></script>
+```
+
+#### Alternate Initialization HTML (Unpkg)
+```html
+<link rel="preload" crossorigin href="https://unpkg.com/@live-components/page-header/partials/utils.mjs" crossorigin as="script"/>
+<script crossorigin type="module" src="https://unpkg.com/@live-components/page-header"></script>
+<script crossorigin nomodule type="text/javascript" src="https://unpkg.com//@live-components/page-header/nomodule.js"></script>
 ```
 
 #### Minimal HTML Content (for SEO)*
